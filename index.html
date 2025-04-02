@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Archivio Franco Battiato</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        /* Navbar trasparente sopra l'immagine */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 85vh;
+            background: url('risorse/SfondoBattiato.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: right;
+            color: white;
+            position: relative;
+        }
+
+        .hero .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: right;
+        }
+
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        
+        /* Stile per rendere il carosello più armonioso */
+        .carousel-inner img {
+            height: 500px;  /* Altezza fissa per evitare salti */
+            object-fit: cover;  /* Mantiene il focus sulle immagini */
+            border-radius: 10px; /* Angoli arrotondati per un aspetto più morbido */
+            filter: grayscale(100%);
+        }
+
+        /* Personalizzazione del bottone */
+        .carousel-caption .btn {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            text-transform: uppercase;
+        }
+        .range-style {
+            -webkit-appearance: none;
+            width: 98%;
+            max-width: 1350px;
+            height: 20px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            box-shadow: inset -2px -2px 8px white, inset 2px 2px 8px rgba(0, 0, 0, 0.3);
+            outline: none;
+            border: none;
+        }
+
+        /* Stile del cursore per WebKit (Chrome, Safari) */
+        .range-style::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(145deg, #ffffff, #d1d1d1);
+            border-radius: 50%;
+            box-shadow: -3px -3px 6px white, 3px 3px 6px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+        }
+
+        .range-style::-webkit-slider-thumb:hover {
+            background: linear-gradient(145deg, #f8f8f8, #bfbfbf);
+        }
+
+        .range-style::-moz-range-thumb:hover {
+            background: linear-gradient(145deg, #f8f8f8, #bfbfbf);
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block; /* o block per larghezza piena */
+            max-width: 100%;
+        }
+
+        .image-container img {
+            display: block;
+            width: auto;
+            height: 600px;
+            filter: grayscale(100%);
+        }
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 60%, rgba(0, 0, 0, 0.3) 80%, transparent 100%);
+            color: #fff;
+            padding: 30px;
+            box-sizing: border-box;
+            text-align: left;
+            min-height: 30%; /* Aumenta la copertura dell'overlay */
+        }
+        .overlay p {
+            margin: 0;
+            padding-top: 50px; /* Sposta il testo più in basso */
+        }
+
+        #yearDisplay {
+            font-size: 2rem; /* Aumenta la dimensione del testo */
+            font-weight: bold; /* Rende il testo in grassetto */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar trasparente sopra l'immagine -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="risorse/logoB.png" alt="Logo" height="60" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="collezione.html">Collezione</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Approfondisci</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Musica</a></li>
+                        <li><a class="dropdown-item" href="#">Cinema</a></li>
+                        <li><a class="dropdown-item" href="#">Pittura</a></li>
+                        <li><a class="dropdown-item" href="#">Altri media</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Esplora</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Biografia</a></li>
+                        <li>
+                           <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">L'Ottava</a></li>
+                        <li><a class="dropdown-item" href="#">Bibliografia</a></li>
+                        <li><a class="dropdown-item" href="#">La Fondazione</a></li>
+                     </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="mappa.html">Mappiato</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container mt-4">
+        <h1>Esplora le opere di Franco Battiato</h1>
+        <form class="d-flex" role="search" style="max-width: 500px;">
+            <button class="btn btn-light border" type="submit">
+                <i class="bi bi-search"></i>
+            </button>
+            <input class="form-control ms-1" type="search" placeholder="Cerca" aria-label="Search">
+        </form>
+    </div>
+</section>
+
+
+
+
+<!-- Contenitore principaleeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
+<div class="container">
+    <!--testo introduttivo-->
+    <div class="col mt-4 mb-3">
+        <h1 class="text-center" style="font-weight: bold">Introduzione</h1>
+        <p class="lead">Franco Battiato è stato un artista che ha saputo fondere tradizione e innovazione, creando un universo musicale e culturale unico. Nato in Sicilia, ha iniziato la sua carriera come autodidatta, trasferendosi a Milano per inseguire la sua passione musicale.</p>
+        <p class="lead">Negli anni '70, Battiato si distingue per la sua ricerca sonora, abbandonando le melodie pop per tuffarsi nell'avanguardia elettronica. La sua musica diventa un ponte tra Oriente e Occidente; con brani come "Sulle corde di Aries", crea atmosfere ipnotiche dove sintetizzatori e strumenti tradizionali si fondono.​</p>
+        <p class="lead">I suoi testi sono poesie moderne, ricche di riferimenti filosofici e spirituali. Parlano di viaggi a Kathmandu, di danzatori dervisci e di una ricerca incessante del sacro nel quotidiano. Battiato ci invita a guardare oltre la superficie, a scoprire la bellezza nascosta in ogni angolo del mondo.</p>
+        <p class="lead">Con l'album "La voce del padrone", Battiato raggiunge l'apice del successo, dimostrando che la sperimentazione può essere anche popolare. La sua musica diventa la colonna sonora di un'epoca, accompagnando le emozioni con eleganza e profondità.</p>
+        <p class="lead">Oltre alla musica, Battiato si distingue nel cinema e nella pittura. Nel 2003, debutta come regista con "Perduto amor", vincendo il Nastro d'Argento come miglior regista esordiente. La sua passione per l'arte visiva lo porta a esporre le sue opere pittoriche, dimostrando la sua versatilità creativa.</p>
+        <p class="lead">Franco Battiato è scomparso nel 2021, lasciando un'eredità culturale che continua a influenzare artisti e appassionati. La sua opera rimane un invito a non accontentarsi, a cercare sempre nuove prospettive e a celebrare la ricchezza della cultura in tutte le sue forme.</p>
+        <div class="d-flex justify-content-center mt-3">
+            <button class="btn btn-dark">Biografia completa</button>
+        </div>
+    </div>
+    <!-- Contenitore del carosello -->
+    <h2 class="text-center mt-5 mb-3" style="font-weight: bold">Esplora per tipo di media</h2>
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="risorse/musicaCar.jpg" class="d-block w-100" alt="Musica">
+                <div class="carousel-caption d-md-block">
+                    <h5>Musica</h5>
+                    <p>Scopri le opere musicali del Maestro</p>
+                    <a href="#" class="btn">Esplora Musica</a>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="risorse/cinemaCar.jpg" class="d-block w-100" alt="Cinema">
+                <div class="carousel-caption d-md-block">
+                    <h5>Cinema e altri media</h5>
+                    <p>Un viaggio tra le sue opere cinematografiche</p>
+                    <a href="#" class="btn">Esplora Cinema</a>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="risorse/pitturaCar.jpg" class="d-block w-100" alt="Pittura">
+                <div class="carousel-caption d-md-block">
+                    <h5>Pittura</h5>
+                    <p>Osserva l'arte grafica</p>
+                    <a href="#" class="btn">Esplora Pittura</a>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+    
+
+    <!-- Contenitore per il titolo e l'immagine -->
+    <h2 class="text-center mt-5 mb-3" style="font-weight: bold">Esplora per periodo</h2>
+    <div class="text-center my-2">
+        <h3 id="periodTitle" class="text-center">Titolo periodo</h3>
+        <div class="image-container">
+            <img id="periodImage" src="immagini/default.jpg" alt="Descrizione default">
+            <div class="overlay">
+                <p id="periodDescription"> Descrizione default del periodo.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- slider anno -->
+    <div class="text-center mb-5">
+        <input type="range" class="range-style" id="yearSlider" min="1965" max="2021" value="1966" step="1">
+        <p id="yearDisplay">1986</p>
+        <button class="btn btn-dark" id="searchButton">Cerca per l'anno selezionato</button>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const slider = document.getElementById("yearSlider");
+        const display = document.getElementById("yearDisplay");
+        const periodTitle = document.getElementById("periodTitle");
+        const periodImage = document.getElementById("periodImage");
+        const periodDescription = document.getElementById("periodDescription");
+        const button = document.getElementById("searchButton");
+    
+        // Funzione per aggiornare titolo e immagine in base all'anno
+        function updatePeriod() {
+            const year = parseInt(slider.value);
+            display.textContent = year;
+    
+            if (year >= 1965 && year <= 1970) {
+                periodTitle.textContent = "Gli esordi e le prime sperimentazioni (1965-1969)";
+                periodImage.src = "risorse/esordi.jpg";
+                periodImage.alt = "Immagine rappresentativa del periodo 'Gli inizi' (1965-1969)";
+                periodDescription.textContent = "Franco Battiato inizia la sua carriera musicale a metà degli anni '60, trasferendosi da Ionia (oggi Acireale) a Milano. Collabora con artisti come Giorgio Gaber e Ombretta Colli, e nel 1965 pubblica il suo primo 45 giri. Tuttavia, è insoddisfatto della musica commerciale e si avvicina a sonorità più sperimentali. Nel 1970, incontra il musicista sperimentale Juri Camisasca e collabora con la band rock progressivo Osage Tribe. In questo periodo, pubblica album come 'Fetus' (1971) e 'Pollution' (1972), caratterizzati da sonorità sperimentali e influenze di artisti come John Cage e Karlheinz Stockhausen.";
+            }
+            else if (year >= 1971 && year <= 1975) {
+                periodTitle.textContent = "L'esperienza con la musica elettronica e le collaborazioni (1971-1975)";
+                periodImage.src = "risorse/milva.jpg";
+                periodImage.alt = "Immagine rappresentativa de L'esperienza con la musica elettronica e le collaborazioni";
+                periodDescription.textContent = "Negli anni '70, Battiato approfondisce l'uso della musica elettronica e collabora con diversi artisti. Nel 1974, pubblica ''Clic'', un album influenzato dal compositore tedesco Karlheinz Stockhausen. Nel 1975, esce ''M.elle le 'Gladiator''', un lavoro sperimentale che riflette le sue ricerche musicali di quel periodo. In questo periodo, collabora con la cantante Milva, partecipando a produzioni teatrali e pubblicando album come ''L'Egitto prima delle sabbie'' (1978).";
+            }
+            else if (year >= 1976 && year <= 1981) {
+                periodTitle.textContent = "La svolta commerciale e il successo mainstream (1976-1981)";
+                periodImage.src = "risorse/lavocedelpadrone.jpg";
+                periodImage.alt = "Immagine rappresentativa de La svolta commerciale e il successo mainstream";
+                periodDescription.textContent = "A partire dalla fine degli anni '70, Battiato inizia a ottenere un successo più ampio con album come ''L'era del cinghiale bianco'' (1979) e ''Patriots'' (1979). Nel 1981, pubblica ''La voce del padrone'', che lo consacra come una delle figure più importanti della musica italiana, grazie a brani come ''Bandiera bianca'' e ''Cuccuruccucù''. Nel 1982, esce ''L'arca di Noè'', che consolida il suo status nel panorama musicale italiano.";
+            }
+            else if (year >= 1982 && year <= 1995) {
+                periodTitle.textContent = "Esplorazioni artistiche e collaborazioni (1982-1995)";
+                periodImage.src = "risorse/genesi.jpg";
+                periodImage.alt = "Immagine rappresentativa de Esplorazioni artistiche e collaborazioni";
+                periodDescription.textContent = "Nel corso degli anni '80 e '90, Battiato continua a sperimentare con diversi generi musicali e collabora con vari artisti. Nel 1983, pubblica ''Orizzonti perduti'' e nel 1984 rappresenta l'Italia all'Eurovision Song Contest insieme ad Alice con il brano ''I treni di Tozeur'', classificandosi al quinto posto. Nel 1985, esce ''Mondi lontanissimi'', seguito da versioni internazionali come ''Echoes of Sufi Dance'' e ''Ecos de danzas sufi''. Nel 1987, presenta ''Genesi'', la sua prima opera, e nel 1992 ''Gilgamesh''. Collabora con il filosofo Manlio Sgalambro, con il quale crea opere come ''Cavaliere dell'intelletto'' e l'album ''L'ombrello e la macchina da cucire'' (1995).";
+            }
+            else if (year >= 1996 && year <= 2021) {
+                periodTitle.textContent = "Ultime produzioni e riconoscimenti (1996-2021)";
+                periodImage.src = "risorse/sanremo.jpg";
+                periodImage.alt = "Immagine rappresentativa de Ultime produzioni e riconoscimenti";
+                periodDescription.textContent = "Negli ultimi anni della sua carriera, Battiato continua a produrre musica e a dirigere film. Nel 1996, pubblica l'album ''L'imboscata'', che include la celebre canzone ''La cura''. Seguono ''Gommalacca'' (1998) e ''Fleurs'' (1999), un album di cover. Nel 2000, presenta ''Campi magnetici'' e nel 2001 ''Ferro battuto''. Oltre alla musica, si dedica al cinema, dirigendo film come ''Perdutoamor'' (2003) e ''Musikanten'' (2005). Nel 2007, pubblica ''Il vuoto'' e nel 2008 ''Fleurs 2''. Nel 2011, partecipa al Festival di Sanremo con il brano ''L'alieno''. Nel 2012, esce ''Apriti Sesamo'', seguito da ''Del suo veloce volo'' (2013) e ''Joe Patti's Experimental Group'' (2014). Nel 2016, pubblica un live album con Alice e l'Orchestra Sinfonica. Franco Battiato è scomparso il 18 maggio 2021, lasciando un'eredità musicale unica e influente.";
+            }
+            else {
+                periodTitle.textContent = "Periodo non definito";
+                periodImage.src = "risorse/esordi.jpg";
+                periodImage.alt = "Immagine default";
+                periodDescription.textContent = " ";
+            }
+        }
+    
+        // Aggiorna il contenuto ogni volta che si sposta lo slider
+        slider.addEventListener("input", updatePeriod);
+    
+        button.addEventListener("click", function () {
+            alert("Ricerca avviata per l'anno: " + slider.value);
+        });
+    
+        // Inizializza il contenuto al caricamento della pagina
+        updatePeriod();
+        });
+    </script>
+    
+
+    <!-- row sul progetto -->
+
+    <h2 class="text-center mt-5" style="font-weight: bold">Il Progetto</h2>
+    <div class="row mt-2 mb-4 text-center">
+        <div class="col-lg-4">
+            <i class="bi bi-palette" style="font-size: 4.5rem; color: black;"></i>
+            <h2 class="fw-normal">Obiettivi</h2>
+            <p>Raccontare l'arte di Franco Battiato in tutte le sue forme: musica, cinema e pittura. Questo archivio vuole offrire una panoramica completa del suo percorso, mettendo in luce la sua visione unica del mondo.</p>
+        </div>
+        <div class="col-lg-4">
+            <i class="bi bi-lightbulb" style="font-size: 4.5rem; color: black;"></i>
+            <h2 class="fw-normal">Origine del progetto</h2>
+            <p>L'idea nasce dalla volontà di esplorare Battiato oltre le sue hit più celebri, dando spazio alle sue opere meno conosciute. Un viaggio tra sperimentazione, spiritualità e ricerca artistica.</p>
+        </div>
+        <div class="col-lg-4">
+            <i class="bi bi-folder" style="font-size: 4.5rem; color: black;"></i>
+            <h2 class="fw-normal">Un archivio per tutti</h2>
+            <p>Questo sito è pensato per appassionati e curiosi, offrendo una risorsa accessibile e ben organizzata. Un modo per avvicinarsi o riscoprire l'eredità di un artista senza tempo.</p>
+        </div>
+    </div>
+    
+</div>
+
+
+
+<!-- Footer -->
+<footer class="bg-dark text-light py-4 mt-5">
+    <div class="container text-center">
+        <div class="row">
+            <!-- Links principali -->
+            <div class="col-md-4">
+                <h5>Informazioni</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light text-decoration-none">Credits</a></li>
+                    <li><a href="WPP.html" class="text-light text-decoration-none">Web Project Plan</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">About Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Icone social -->
+            <div class="col-md-4">
+                <h5>Seguici</h5>
+                <a href="#" class="me-3">
+                    <img src="risorse/Instagram.png" alt="Instagram" width="30">
+                </a>
+                <a href="#" class="me-3">
+                    <img src="risorse/Facebook.png" alt="Facebook" width="30">
+                </a>
+                <a href="#">
+                    <img src="risorse/twitter.png" alt="X" width="30">
+                </a>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="col-md-4">
+                <h5>Note legali</h5>
+                <p class="small">Progetto privo di scopo di lucro, finalità totalmente amatoriali. L'autore non si assume nessuna responsabilità legale.</p>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="mt-3">
+            <p class="small mb-0">&copy; 2025 Archivio Franco Battiato. Tutti i diritti riservati.</p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</body>
+</html>

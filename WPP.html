@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="it">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Archivio Franco Battiato</title>
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+      <style>
+         body {
+         font-family: 'DM Sans', sans-serif;
+         }
+         .navbar {
+         background-color: rgba(0, 0, 0, 0.5);
+         position: absolute;
+         width: 100%;
+         z-index: 1000;
+         }
+         .hero {
+         height: 85vh;
+         background: url('risorse/WPP.jpg') center/cover no-repeat;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         text-align: right;
+         color: white;
+         position: relative;
+         }
+         .hero h1 {
+         font-size: 3rem;
+         font-weight: bold;
+         text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+         }
+      </style>
+   </head>
+   <body>
+      <!-- Navbar trasparente sopra l'immagine -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+         <div class="container">
+            <a class="navbar-brand" href="index.html">
+            <img src="risorse/logoB.png" alt="Logo" height="60" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav ms-auto">
+                  <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="collezione.html">Collezione</a></li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Approfondisci</a>
+                     <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Musica</a></li>
+                        <li><a class="dropdown-item" href="#">Cinema</a></li>
+                        <li><a class="dropdown-item" href="#">Pittura</a></li>
+                        <li><a class="dropdown-item" href="#">Altri media</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Esplora</a>
+                     <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Biografia</a></li>
+                      <li>
+                         <hr class="dropdown-divider">
+                      </li>
+                      <li><a class="dropdown-item" href="#">L'Ottava</a></li>
+                      <li><a class="dropdown-item" href="#">Bibliografia</a></li>
+                      <li><a class="dropdown-item" href="#">La Fondazione</a></li>
+                   </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="mappa.html">Mappiato</a></li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <!-- breadcrumb da mettere trasparente sopra al hero -->
+      <nav style="--bs-breadcrumb-divider: '>'; position: absolute; top: 80px; left: 0; width: 100%; background: transparent; z-index: 1050;" aria-label="breadcrumb">
+         <div class="container mt-4">
+            <ol class="breadcrumb" style="background: transparent; margin: 0; padding: 0 15px; font-size: 1.35rem;">
+               <li class="breadcrumb-item" style="text-shadow: 2px 2px 5px rgba(0,0,0,0.8);">
+                  <a href="index.html" style="color: white; text-shadow: 2px 2px 5px rgba(0,0,0,0.8);">Home</a>
+               </li>
+               <li class="breadcrumb-item active" aria-current="page" style="color: white; text-shadow: 2px 2px 5px rgba(0,0,0,0.8);">WPP</li>
+            </ol>
+         </div>
+      </nav>
+      <!-- Hero Section -->
+      <section class="hero">
+         <div class="container mt-4">
+            <h1>Web Project Plan</h1>
+         </div>
+      </section>
+      <!-- Contenitore principaleeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
+      <div class="container my-5">
+        <section id="web-project-plan">
+           <h2>WEB PROJECT PLAN</h2>
+           <hr>
+           <!-- Sezione 1. Idea -->
+           <div id="idea">
+              <h3>1. Idea</h3>
+              <p>
+                 L'idea del progetto è quella di creare un archivio digitale completo e multidisciplinare dedicato a Franco Battiato, volto a celebrare la sua eredità artistica. Il sito raccoglie e organizza una vasta gamma di contenuti – dalla musica al cinema, dalle opere d’arte alle registrazioni live e interviste – offrendo agli utenti un'esperienza immersiva che metta in luce la complessità e la ricchezza dell’operato del celebre artista.
+              </p>
+           </div>
+           <!-- Sezione 2. Brief -->
+           <div id="brief" class="mt-5">
+              <h3>2. Brief</h3>
+              <!-- 2.1 Finalità -->
+              <div id="finalita" class="mt-3">
+                 <h4>2.1 Finalità</h4>
+                 <p>
+                    Lo scopo principale del sito è valorizzare e diffondere la conoscenza dell’opera di Franco Battiato, fornendo una piattaforma interattiva e accessibile a tutti. Gli obiettivi sono:
+                 </p>
+                 <ul>
+                    <li>Celebrare il percorso artistico di Battiato attraverso una raccolta integrata di contenuti.</li>
+                    <li>Offrire una risorsa educativa e ispirazionale per fan, studiosi e appassionati di arte e cultura.</li>
+                    <li>Permettere agli utenti di esplorare in modo approfondito le diverse dimensioni della sua produzione artistica.</li>
+                 </ul>
+              </div>
+              <!-- 2.2 Pubblico -->
+              <div id="pubblico" class="mt-4">
+                 <h4>2.2 Pubblico</h4>
+                 <p>
+                    Il sito si rivolge a un pubblico diversificato, tra cui:
+                 </p>
+                 <ul>
+                    <li>Fan e appassionati di Franco Battiato</li>
+                    <li>Studenti e ricercatori di musica, cinema e arti visive</li>
+                    <li>Critici e storici della cultura italiana</li>
+                    <li>Curiosi e amanti dell’arte in generale</li>
+                 </ul>
+                 <p>
+                    Tutti gli utenti avranno accesso agli stessi contenuti, con strumenti di navigazione che consentono approfondimenti specifici in base alle diverse categorie proposte.
+                 </p>
+              </div>
+              <!-- 2.3 Accesso -->
+              <div id="accesso" class="mt-4">
+                 <h4>2.3 Accesso</h4>
+                 <p>
+                    La piattaforma sarà progettata per garantire un'esperienza di fruizione ottimale su vari dispositivi (desktop, tablet e smartphone). Verrà utilizzato un mix di testo, immagini, video e audio per arricchire l’interazione. L’interfaccia sarà intuitiva, con un design responsive e con chiari strumenti di navigazione che agevolino l’accesso ai diversi contenuti.
+                 </p>
+              </div>
+              <!-- 2.4 Contenuti e Dati -->
+              <div id="contenuti-dati" class="mt-4">
+                 <h4>2.4 Contenuti e Dati</h4>
+                 <p>
+                    I contenuti saranno ricavati da fonti diversificate, quali:
+                 </p>
+                 <ul>
+                    <li>Archivi digitali di registrazioni audio e video di concerti e interviste</li>
+                    <li>Collezioni di album musicali e filmati documentari</li>
+                    <li>Opere d’arte visiva e dipinti correlati alla figura di Battiato</li>
+                 </ul>
+                 <p>
+                    In aggiunta, saranno creati contenuti originali per contestualizzare e commentare il materiale esistente, offrendo così una visione approfondita del percorso artistico del musicista.
+                 </p>
+              </div>
+           </div>
+           <!-- Sezione 3. Benchmark -->
+           <div id="benchmark" class="mt-5">
+              <h3>3. Benchmark</h3>
+              <hr>
+              <!-- Sezione 1. Analisi di Mercato -->
+              <div id="ananlisimercato" class="mt-3">
+                  <h4>3.1 Analisi di Mercato</h4>
+                  <p>
+                   Sul web esistono numerosi siti dedicati alla musica e al cinema italiano, ma pochi offrono una visione integrata e multidimensionale dell’opera di un singolo artista. Mentre alcuni portali si concentrano esclusivamente sulla discografia o sulla biografia, questo progetto intende colmare il divario esistente, fornendo un’esperienza completa che unisca musica, immagini, video e testi critici in un unico archivio. Un sito che è stato apertamente preso di ispirazione sia per alcuni elementi che verranno affrontati dopo, che per l'idea sopra descritta, è quello dell'archivio della Fondazione Giorgio Gaber, sito molto ben riuscito nel suo intento in mia opinione per un artista che come Battiato ha spaziato tra diverse discipline artistiche.
+                  </p>
+              </div>
+              <!-- Sezione 2. Analisi dei concorrenti -->
+              <div id="analisiconc" class="mt-4">
+                 <h4>3.2 Analisi dei Concorrenti</h4>
+                 
+                 <!-- Concorrente 1 -->
+                 <div class="mt-3">
+                    <h5>Centro Studi di Gravità Permanente</h5>
+                    <p><strong>Caratteristiche:</strong></p>
+                    <ul>
+                       <li>Sito dedicato alla raccolta, conservazione e diffusione dell'opera poliedrica di Franco Battiato.</li>
+                       <li>Presenta una homepage con immagini rappresentative dell'artista e sezioni informative.</li>
+                    </ul>
+                    <p><strong>Punti di forza:</strong></p>
+                    <ul>
+                       <li>Mission chiara e focalizzata sulla valorizzazione dell'opera di Battiato.</li>
+                       <li>Design semplice e funzionale che facilita la navigazione.</li>
+                    </ul>
+                    <p><strong>Punti deboli:</strong></p>
+                    <ul>
+                       <li>Contenuti limitati e poco approfonditi.</li>
+                       <li>Scarsa interattività e coinvolgimento dell'utente.</li>
+                    </ul>
+                 </div>
+                 
+                 <!-- Concorrente 2 -->
+                 <div class="mt-4">
+                    <h5>Franco Battiato Forum</h5>
+                    <p><strong>Caratteristiche:</strong></p>
+                    <ul>
+                       <li>Piattaforma online dedicata ai fan per discutere e condividere informazioni sull'artista.</li>
+                       <li>Include sezioni tematiche che coprono vari aspetti della carriera e delle opere di Battiato.</li>
+                    </ul>
+                    <p><strong>Punti di forza:</strong></p>
+                    <ul>
+                       <li>Comunità attiva di appassionati e fan.</li>
+                       <li>Ampia gamma di discussioni che favoriscono l'approfondimento.</li>
+                    </ul>
+                    <p><strong>Punti deboli:</strong></p>
+                    <ul>
+                       <li>Interfaccia datata che richiede un aggiornamento estetico e funzionale.</li>
+                       <li>Navigazione non sempre intuitiva per i nuovi utenti.</li>
+                    </ul>
+                 </div>
+                 
+                 <!-- Concorrente 3 -->
+                 <div class="mt-4">
+                    <h5>Battiato.it</h5>
+                    <p><strong>Caratteristiche:</strong></p>
+                    <ul>
+                       <li>Sito ufficiale dedicato a Franco Battiato, con informazioni dettagliate sulla sua discografia e carriera.</li>
+                       <li>Design pulito e professionale, focalizzato sulla presentazione delle opere.</li>
+                    </ul>
+                    <p><strong>Punti di forza:</strong></p>
+                    <ul>
+                       <li>Fonte autorevole con dati accurati.</li>
+                       <li>Design elegante e ben strutturato.</li>
+                    </ul>
+                    <p><strong>Punti deboli:</strong></p>
+                    <ul>
+                        <li>Mancanza di contenuti interattivi o multimediali che possano arricchire l’esperienza dell’utente.</li>
+                        <li>Catalogazione disordinata, la navigazione è molto poco intuitiva e con poche funzionalità.</li>
+                        <li>Aggiornamenti non particolarmente frequenti, dando l'impressione di un sito statico.</li>
+                    </ul>
+                 </div>
+              </div>
+              <!-- Sezione 3. Differenziazione del Progetto -->
+              <div id="differenziazione" class="mt-4">
+                 <h4>3.3 Differenziazione del Progetto</h4>
+                 <p>
+                    Il sito si propone di diventare il punto di riferimento per la conoscenza dell’opera di Franco Battiato, offrendo:
+                 </p>
+                 <ul>
+                    <li>Un’esperienza utente immersiva e interattiva, che integri contenuti multimediali di alta qualità.</li>
+                    <li>Un’architettura informativa strutturata che renda semplice la navigazione tra le varie tipologie di contenuti.</li>
+                    <li>Strumenti di ricerca e filtri avanzati per facilitare l’accesso a specifiche categorie di opere, permettendo approfondimenti mirati.</li>
+                 </ul>
+              </div>
+           </div>
+           <!-- Sezione 4. Struttura -->
+            <div id="struttura" class="mt-5">
+                <h3>4. Struttura</h3>
+                <hr>
+                <!-- 4.1 Mappa concettuale -->
+                <div id="mappa-concettuale" class="mt-3">
+                <h4>4.1 Mappa concettuale</h4>
+                <!-- Immagine della mappa concettuale -->
+                <div class="text-center">
+                    <img src="risorse/ER.jpg" alt="Mappa concettuale del progetto" class="img-fluid mt-3">
+                </div>
+                <p class="text-center mt-2">
+                    <small>Figura 1: Mappa concettuale del sito</small>
+                </p>
+                </div>
+                <!-- 4.2 Schema delle Dipendenze -->
+                <div id="schema-dipendenze" class="mt-3">
+                <h4>4.2 Schema delle Dipendenze</h4>
+                <div class="text-center">
+                    <img src="risorse/dipendenze.jpg" alt="Mappa concettuale del progetto" class="img-fluid mt-3">
+                </div>
+                <p class="text-center mt-2">
+                    <small>Figura 2: Schema delle Dipendenze</small>
+                </p>
+                </div>
+                <!-- 4.3 Categorie Descrittive -->
+                <div id="categorie-descrittive" class="mt-3">
+                <h4>4.3 Categorie Descrittive</h4>
+                <p>
+                    Le categorie utilizzate per classificare le opere e i contenuti includono:
+                </p>
+                <ul>
+                    <li>Album Musicali</li>
+                    <li>Film</li>
+                    <li>Dipinti</li>
+                    <li>Registrazioni</li>
+                    <li>Altri Media</li>
+                </ul>
+                </div>
+            </div>
+            <!-- Sezione 5. WireFrame -->
+            <div id="wireframe" class="mt-5">
+                <h3>5. WireFrame</h3>
+                <hr>
+                <!-- 5.1 Wireframe della Homepage -->
+                <div id="wireframe-homepage" class="mt-4">
+                    <h4>5.1 Wireframe della Homepage</h4>
+                    <div class="text-center">
+                        <img src="risorse/homepage.jpg" alt="Wireframe della Homepage" class="img-fluid mt-3">
+                    </div>
+                    <p class="text-center mt-2">
+                        <small>Figura 3: Wireframe della Homepage</small>
+                    </p>
+                </div>
+                
+                <!-- 5.2 Wireframe di una Pagina di Dettaglio -->
+                <div id="wireframe-dettaglio" class="mt-4">
+                    <h4>5.2 Wireframe di una Pagina di Dettaglio</h4>
+                    <div class="text-center">
+                        <img src="risorse/dettaglio.jpg" alt="Wireframe di una Pagina di Dettaglio" class="img-fluid mt-3">
+                    </div>
+                    <p class="text-center mt-2">
+                        <small>Figura 4: Wireframe di una Pagina di Dettaglio</small>
+                    </p>
+                </div>
+            </div>
+            <!-- Sezione 6. Usabilità -->
+            <div id="usabilita" class="mt-5">
+                <h3>6. Usabilità</h3>
+                <hr>
+                
+                <!-- Norme di usabilità per l'architettura -->
+                <div id="usabilita-architettura" class="mt-4">
+                    <h4>6.1 Norme di usabilità per l'architettura</h4>
+                    <ul>
+                        <li><strong>Menu di navigazione fisso</strong> per un accesso immediato alle principali sezioni.</li>
+                        <li><strong>Struttura a griglie e card</strong> per una visualizzazione chiara dei contenuti multimediali.</li>
+                        <li><strong>Collegamenti interni ben strutturati</strong> per facilitare il passaggio tra le diverse aree tematiche.</li>
+                        <li><strong>Ricerca avanzata</strong> con filtri per esplorare rapidamente i contenuti per categoria, anno, album o opera.</li>
+                    </ul>
+                </div>
+                
+                <!-- Norme di usabilità per l'aspetto e la tipografia -->
+                <div id="usabilita-tipografia" class="mt-4">
+                    <h4>6.2 Norme di usabilità per l'aspetto e la tipografia</h4>
+                    <ul>
+                        <li><strong>Bottoni ben evidenziati</strong> per guidare l’utente nelle interazioni chiave.</li>
+                        <li><strong>Caratteri tipografici moderni e leggibili</strong> per garantire la fruibilità su dispositivi mobili e desktop.</li>
+                        <li><strong>Feedback visivo e interattivo</strong>, come animazioni fluide su hover e transizioni leggere tra le pagine.</li>
+                    </ul>
+                </div>
+                
+                <!-- Norme di usabilità per colori, font e icone -->
+                <div id="usabilita-colori" class="mt-4">
+                    <h4>6.3 Norme di usabilità per colori, font e icone</h4>
+                    <ul>
+                        <li><strong>Palette di colori eleganti e armoniose</strong> ispirate alle copertine degli album di Battiato.</li>
+                        <li><strong>Icone intuitive</strong> per agevolare la navigazione.</li>
+                        <li><strong>Font sans-serif eleganti e accessibili</strong> per migliorare la leggibilità.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sezione 7. Servizi -->
+            <div id="servizi" class="mt-5">
+                <h3>7. Servizi</h3>
+                <hr>
+                
+                <!-- Sistemi di browsing -->
+                <div id="browsing" class="mt-4">
+                    <h4>7.1 Sistemi di browsing per valorizzare l'accesso</h4>
+                    <ul>
+                        <li><strong>Filtri avanzati</strong> per cercare opere per anno, genere, album, film o tematica.</li>
+                        <li><strong>Mappa interattiva</strong> per visualizzare i luoghi chiave della carriera dell’artista.</li>
+                        <li><strong>Archivio multimediale</strong> con riproduzione diretta di estratti musicali, trailer di film e gallerie di immagini.</li>
+                    </ul>
+                </div>
+                
+                <!-- Utilities e tools -->
+                <div id="utilities" class="mt-4">
+                    <h4>7.2 Utilities e tools per l'interazione</h4>
+                    <ul>
+                        <li><strong>Modalità scura</strong> per un'esperienza visiva più confortevole.</li>
+                        <li><strong>Playlist tematiche</strong> per ascoltare brani selezionati secondo filoni tematici.</li>
+                        <li><strong>Struttura a card</strong> per una presentazione chiara degli album, film e dipinti.</li>
+                        <li><strong>Paginazione dinamica</strong> per facilitare la navigazione tra contenuti numerosi.</li>
+                        <li><strong>Modali interattivi</strong> per visualizzare dettagli su opere e interviste.</li>
+                    </ul>
+                </div>
+                
+                <!-- Sviluppi futuri -->
+                <div id="sviluppi" class="mt-4">
+                    <h4>7.3 Sviluppi futuri</h4>
+                    <ul>
+                        <li><strong>Database espanso</strong> per includere aneddoti, recensioni critiche e approfondimenti sulle opere.</li>
+                        <li><strong>Sezione “Battiato e le influenze”</strong> per esplorare artisti e correnti di pensiero legate alla sua produzione.</li>
+                        <li><strong>Area community</strong> con forum o sezioni commenti.</li>
+                        <li><strong>“Vota la tua opera preferita”</strong> per permettere agli utenti di segnalare i brani o le opere più amate.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+     </div>
+      <!-- FINEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE -->
+      <!-- Footer -->
+      <footer class="bg-dark text-light py-4 mt-5">
+         <div class="container text-center">
+            <div class="row">
+               <!-- Links principali -->
+               <div class="col-md-4">
+                  <h5>Informazioni</h5>
+                  <ul class="list-unstyled">
+                     <li><a href="#" class="text-light text-decoration-none">Credits</a></li>
+                     <li><a href="WPP.html" class="text-light text-decoration-none">Web Project Plan</a></li>
+                     <li><a href="#" class="text-light text-decoration-none">About Us</a></li>
+                  </ul>
+               </div>
+               <!-- Icone social -->
+               <div class="col-md-4">
+                  <h5>Seguici</h5>
+                  <a href="#" class="me-3">
+                  <img src="risorse/Instagram.png" alt="Instagram" width="30">
+                  </a>
+                  <a href="#" class="me-3">
+                  <img src="risorse/Facebook.png" alt="Facebook" width="30">
+                  </a>
+                  <a href="#">
+                  <img src="risorse/twitter.png" alt="X" width="30">
+                  </a>
+               </div>
+               <!-- Disclaimer -->
+               <div class="col-md-4">
+                  <h5>Note legali</h5>
+                  <p class="small">Progetto privo di scopo di lucro, finalità totalmente amatoriali. L'autore non si assume nessuna responsabilità legale.</p>
+               </div>
+            </div>
+            <!-- Copyright -->
+            <div class="mt-3">
+               <p class="small mb-0">&copy; 2025 Archivio Franco Battiato. Tutti i diritti riservati.</p>
+            </div>
+         </div>
+      </footer>
+      <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+   </body>
+</html>

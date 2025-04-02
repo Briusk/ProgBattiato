@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="it">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Archivio Franco Battiato</title>
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+      <style>
+         body {
+            font-family: 'DM Sans', sans-serif;
+            padding-top: 0; /* Rimosso il padding-top necessario per la navbar fixed */
+         }
+         .navbar {
+            background-color: #000000; /* Sfondo nero solido */
+         }
+         .elemento-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+         }
+         .elemento-info-table {
+            margin-top: 20px;
+            margin-bottom: 30px;
+         }
+         .elemento-info-table th {
+            width: 30%;
+            background-color: #f8f9fa;
+         }
+         .elemento-details {
+            margin-top: 20px; /* Ridotto il margine superiore */
+            margin-bottom: 30px;
+         }
+         .related-items {
+            background-color: #f8f9fa;
+            padding: 30px 0;
+            margin-top: 40px;
+         }
+         .related-item-card {
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+         }
+         .related-item-card:hover {
+            transform: translateY(-5px);
+         }
+         .quote-container {
+            background-color: #f8f9fa;
+            border-left: 4px solid #6c757d;
+            padding: 20px;
+            margin: 20px 0;
+         }
+         .play-btn {
+            color: #198754;
+            cursor: pointer;
+            transition: all 0.2s;
+         }
+         .play-btn:hover {
+            transform: scale(1.2);
+         }
+         .breadcrumb-wrapper {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            border-bottom: 1px solid #dee2e6;
+         }
+         .album-info-card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+         }
+         .album-cover-art {
+            padding: 15px;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 4px;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- Navbar con sfondo nero -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+         <div class="container">
+            <a class="navbar-brand" href="index.html">
+            <img src="risorse/logoB.png" alt="Logo" height="60" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav ms-auto">
+                  <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="collezione.html">Collezione</a></li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Approfondisci</a>
+                     <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Musica</a></li>
+                        <li><a class="dropdown-item" href="#">Cinema</a></li>
+                        <li><a class="dropdown-item" href="#">Pittura</a></li>
+                        <li><a class="dropdown-item" href="#">Altri media</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Esplora</a>
+                     <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Biografia</a></li>
+                      <li>
+                         <hr class="dropdown-divider">
+                      </li>
+                      <li><a class="dropdown-item" href="#">L'Ottava</a></li>
+                      <li><a class="dropdown-item" href="#">Bibliografia</a></li>
+                      <li><a class="dropdown-item" href="#">La Fondazione</a></li>
+                   </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="mappa.html">Mappiato</a></li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      
+      <!-- breadcrumb normali sotto la navbar -->
+      <div class="breadcrumb-wrapper">
+         <div class="container">
+            <nav aria-label="breadcrumb">
+               <ol class="breadcrumb mb-0">
+                  <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
+                  <li class="breadcrumb-item"><a href="collezione.html" class="text-decoration-none">Collezione</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Fetus</li>
+               </ol>
+            </nav>
+         </div>
+      </div>
+      
+      <!-- Contenitore principale -->
+      <div class="container elemento-details">
+         <!-- Intestazione con tipologia dell'elemento -->
+         <div class="row mt-4 mb-4">
+            <div class="col-12">
+               <div class="d-flex align-items-center">
+                  <i class="bi bi-music-note-beamed fs-1 me-3"></i>
+                  <h2 class="mb-0">Fetus</h2>
+               </div>
+               <p class="text-muted mt-2">Album di debutto (1972)</p>
+            </div>
+         </div>
+         
+         <!-- Contenuto principale con immagine e descrizione -->
+         <div class="row">
+            <!-- Colonna sinistra con immagine -->
+            <div class="col-md-5">
+               <div class="album-cover-art">
+                  <img src="risorse/fetus1.jpg" alt="Copertina dell'album Fetus di Franco Battiato" class="elemento-image img-fluid rounded">
+               </div>
+               <p class="text-muted fst-italic mt-3">La copertina provocatoria del disco, che raffigura un feto poggiato su un foglio di carta grezza, spinse molti negozianti a non esporre l'album.</p>
+               
+               <!-- Tabella informazioni tecniche -->
+               <div class="elemento-info-table">
+                  <h4 class="mb-3">Informazioni tecniche</h4>
+                  <table class="table table-bordered">
+                     <tbody>
+                        <tr>
+                           <th>Artista</th>
+                           <td>Franco Battiato</td>
+                        </tr>
+                        <tr>
+                           <th>Pubblicazione</th>
+                           <td>Gennaio 1972</td>
+                        </tr>
+                        <tr>
+                           <th>Durata</th>
+                           <td>30:40</td>
+                        </tr>
+                        <tr>
+                           <th>Genere</th>
+                           <td>Musica elettronica, Musica sperimentale, Rock sperimentale</td>
+                        </tr>
+                        <tr>
+                           <th>Etichetta</th>
+                           <td>Bla Bla</td>
+                        </tr>
+                        <tr>
+                           <th>Produttore</th>
+                           <td>Pino Massara</td>
+                        </tr>
+                        <tr>
+                           <th>Registrazione</th>
+                           <td>Studi Regson, Milano (novembre 1971)</td>
+                        </tr>
+                        <tr>
+                           <th>Formato originale</th>
+                           <td>LP, MC</td>
+                        </tr>
+                        <tr>
+                           <th>Riconoscimenti</th>
+                           <td>Premio "Billboard Europa" come migliore opera prima</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+            
+            <!-- Colonna destra con descrizione e contenuti aggiuntivi -->
+            <div class="col-md-7">
+               <div class="elemento-description">
+                  <h4>Descrizione</h4>
+                  <p>Primo album in studio di Franco Battiato, "<strong>Fetus</strong>" è un concept album ispirato al romanzo "<em>Il mondo nuovo</em>" (1932) di Aldous Huxley, nel quale viene descritta una società distopica in cui ogni individuo è costruito in laboratorio. Attraverso le canzoni del disco si compie una sorta di viaggio interiore psichedelico con balzi dal microscopico della cellula all'infinito dello spazio.</p>
+                  
+                  <p>I testi sono enigmatici e ispirati a tematiche para-scientifiche. Un'altra fonte di ispirazione sono gli scritti sul senso della vita del filosofo Paramahansa Yogananda.</p>
+                  
+                  <p>L'album fa da "ponte" fra influenze di musica elettronica, rock progressivo e musica leggera. La presenza di strumenti allora scarsamente diffusi, come il sintetizzatore VCS3 e la batteria elettronica, lo rende tra i primi album di canzoni con strumentazione fortemente elettronica prodotti in Italia.</p>
+                  
+                  <div class="quote-container">
+                     <p class="mb-0">Il testo della canzone "<em>Fenomenologia</em>" si conclude con l'enunciazione dell'equazione del moto armonico, x1 = A * sen(ωt) e x2 = A * sen(ωt + γ), che descrive il funzionamento degli oscillatori armonici di cui è composto il VCS3. La rappresentazione grafica delle due espressioni ricorda, inoltre, la struttura a doppia elica del DNA, anch'esso attinente per tematiche all'album.</p>
+                  </div>
+                  
+                  <p>Alla fine della canzone "<em>Meccanica</em>" si sente un estratto delle conversazioni che intercorsero tra l'equipaggio dell'Apollo 11, Neil Armstrong e Edwin Aldrin, e il presidente Richard Nixon, su cui si inserisce l'Aria dalla Suite n. 3 in re maggiore per orchestra, BWV 1068 di Johann Sebastian Bach, nota anche come Aria sulla quarta corda.</p>
+                  
+                  <p>Le immagini all'interno della copertina raffigurano invece la scultura Hon-en katedral di Niki de Saint Phalle e il cantautore vestito con una tuta sintetica.</p>
+                  
+                  <div class="alert alert-secondary mt-4" role="alert">
+                    <strong>Curiosità:</strong> Il retro di copertina presenta un errore nell'ordine delle tracce, collocando Fetus come prima traccia ed Energia tra Cariocinesi e Fenomenologia. Nell'edizione su CD del 1998, realizzata dalla BMG Ricordi, l'ordine dei brani è stato cambiato per rispettare quello riportato in copertina. Questo cambiamento è stato mantenuto nella maggioranza delle riedizioni successive.
+                  </div>
+                  
+                  <!-- Varianti e edizioni -->
+                  <div class="mt-4">
+                     <h4>Versione inglese: Foetus</h4>
+                     <p>Nel 1974 venne registrata una versione interamente cantata in inglese, intitolata "<strong>Foetus</strong>", con l'intenzione di pubblicarla all'estero attraverso la casa discografica Island Records. Il progetto, però, venne annullato e la Island preferì pubblicare alcuni mesi dopo un'edizione di Clic. Alla fine "<em>Foetus</em>" uscì solo diversi anni dopo, pubblicato in Italia dalla VM 2000 nel 1999.</p>
+                     
+                     <p>Quest'edizione presenta alcune differenze nel missaggio rispetto a quella italiana, e una sezione inedita in "<em>Phenomenology</em>", simile al brano Beta dell'album Pollution.</p>
+                  </div>
+                  
+                  <div class="mt-4">
+                     <h4>Accoglienza</h4>
+                     <p>L'album vendette circa 7.000 copie. Ottenne buone recensioni alla sua uscita, in particolare la rivista <em>Ciao 2001</em> lo definì "un disco davvero sorprendente" in cui "l'elettronica [...] si accoppia con melodie di stampo tradizionalmente italiano e ne escono momenti piacevoli e davvero originali per la scena musicale italiana".</p>
+                  </div>
+                  
+                  <!-- Tracklist con pulsanti play -->
+                  <div class="mt-4">
+                     <h4>Tracklist - Edizione originale LP</h4>
+                     <p><em>Testi di Franco Battiato e Sergio Albergoni; musiche di Franco Battiato e Pino Massara.</em></p>
+                     
+                     <div class="card mb-3">
+                        <div class="card-header bg-light">
+                           <strong>Lato A</strong>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                           <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <div class="ms-2 me-auto">
+                                 <div class="fw-bold">1. Energia</div>
+                                 <span class="text-muted">4:31</span>
+                              </div>
+                              <a href="https://www.youtube.com/watch?v=LINK_TO_ENERGIA" target="_blank" class="btn btn-sm btn-outline-success rounded-circle">
+                                 <i class="bi bi-play-fill fs-5 play-btn"></i>
+                              </a>
+                           </li>
+                           <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <div class="ms-2 me-auto">
+                                 <div class="fw-bold">2. Fetus</div>
+                                 <span class="text-muted">2:39</span>
+                              </div>
+                              <a href="https://www.youtube.com/watch?v=LINK_TO_FETUS" target="_blank" class="btn btn-sm btn-outline-success rounded-circle">
+                                 <i class="bi bi-play-fill fs-5 play-btn"></i>
+                              </a>
+                           </li>
+                           <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <div class="ms-2 me-auto">
+                                 <div class="fw-bold">3. Una cellula</div>
+                                 <span class="text-muted">2:55</span>
+                              </div>
+                              <a href="https://www.youtube.com/watch?v=LINK_TO_UNA_CELLULA" target="_blank" class="btn btn-sm btn-outline-success rounded-circle">
+                                 <i class="bi bi-play-fill fs-5 play-btn"></i>
+                              </a>
+                           </li>
+                           <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <div class="ms-2 me-auto">
+                                 <div class="fw-bold">4. Cariocinesi</div>
+                                 <span class="text-muted">1:59</span>
+                              </div>
+                              <a href="https://www.youtube.com/watch?v=LINK_TO_CARIOCINESI" target="_blank" class="btn btn-sm btn-outline-success rounded-circle">
+                                 <i class="bi bi-play-fill fs-5 play-btn"></i>
+                              </a>
+                           </li>
+                           <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <div class="ms-2 me-auto">
+                                 <div class="fw-bold">5. Fenomenologia</div>
+                                 <span class="text-muted">3:51</span>
+                              </div>
+                              <a href="https://www.youtube.com/watch?v=LINK_TO_FENOMENOLOGIA" target="_blank" class="btn btn-sm btn-outline-success rounded-circle">
+                                 <i class="bi bi-play-fill fs-5 play-btn"></i>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                     
+                     <div class="card">
+                        <div class="card-header bg-light">
+                           <strong>Lato B</strong>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                           <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <div class="ms-2 me-auto">
+                                 <div class="fw-bold">1. Meccanica</div>
+                                 <span class="text-muted">6:11</span>
+                              </div>
+                              <a href="https://www.youtube.com/watch?v=LINK_TO_MECCANICA" target="_blank" class="btn btn-sm btn-outline-success rounded-circle">
+                                 <i class="bi bi-play-fill fs-5 play-btn"></i>
+                              </a>
+                           </li>
+                           <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <div class="ms-2 me-auto">
+                                 <div class="fw-bold">2. Anafase</div>
+                                 <span class="text-muted">5:36</span>
+                              </div>
+                              <a href="https://www.youtube.com/watch?v=LINK_TO_ANAFASE" target="_blank" class="btn btn-sm btn-outline-success rounded-circle">
+                                 <i class="bi bi-play-fill fs-5 play-btn"></i>
+                              </a>
+                           </li>
+                           <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <div class="ms-2 me-auto">
+                                 <div class="fw-bold">3. Mutazione</div>
+                                 <span class="text-muted">2:58</span>
+                              </div>
+                              <a href="https://www.youtube.com/watch?v=LINK_TO_MUTAZIONE" target="_blank" class="btn btn-sm btn-outline-success rounded-circle">
+                                 <i class="bi bi-play-fill fs-5 play-btn"></i>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                     
+                     <!-- Edizioni alternative -->
+                     <div class="accordion mt-3" id="accordionEdizioni">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              Edizione su CD del 1998
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionEdizioni">
+                            <div class="accordion-body">
+                              <ol class="list-group list-group-numbered">
+                                 <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">Fetus</div>
+                                    <span>2:39</span>
+                                 </li>
+                                 <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">Una cellula</div>
+                                    <span>2:55</span>
+                                 </li>
+                                 <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">Cariocinesi</div>
+                                    <span>1:59</span>
+                                 </li>
+                                 <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">Energia</div>
+                                    <span>4:31</span>
+                                 </li>
+                                 <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">Fenomenologia</div>
+                                    <span>3:51</span>
+                                 </li>
+                                 <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">Meccanica</div>
+                                    <span>6:11</span>
+                                 </li>
+                                 <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">Anafase</div>
+                                    <span>5:36</span>
+                                 </li>
+                                 <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">Mutazione</div>
+                                    <span>2:58</span>
+                                 </li>
+                              </ol>
+                              <p class="mt-2 text-muted">Durata totale: 30:40</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Edizione in inglese (Foetus)
+                            </button>
+                          </h2>
+                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionEdizioni">
+                            <div class="accordion-body">
+                              <ol class="list-group list-group-numbered">
+                                 <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">Energy</div>
+                                    <span>3:05</span>
+                                 </li>
+                                 <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">Foetus</div>
+                                    <span>2:37</span>
+                                 </li>
+                                 <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">A Cell</div>
+                                    <span>2:54</span>
+                                 </li>
+                                 <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">Karyokinesis</div>
+                                    <span>1:59</span>
+                                 </li>
+                                 <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">Phenomenology</div>
+                                    <span>4:58</span>
+                                 </li>
+                                 <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">Mechanics</div>
+                                    <span>6:11</span>
+                                 </li>
+                                 <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">Anaphase</div>
+                                    <span>5:34</span>
+                                 </li>
+                                 <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">Mutation</div>
+                                    <span>2:48</span>
+                                 </li>
+                              </ol>
+                              <p class="mt-2 text-muted">Durata totale: 30:06</p>
+                            </div>
+                          </div>
+                        </div>
+                     </div>
+                  </div>
+                  
+                  <!-- Musicisti -->
+                  <div class="mt-4">
+                     <h4>Formazione</h4>
+                     <ul class="list-group">
+                        <li class="list-group-item"><strong>Franco Battiato:</strong> voce, synth, chitarra elettrica</li>
+                        <li class="list-group-item"><strong>Gianfranco D'Adda:</strong> batteria, percussioni</li>
+                        <li class="list-group-item"><strong>Gianni Mocchetti:</strong> chitarra elettrica, chitarra acustica, basso, cori</li>
+                        <li class="list-group-item"><strong>Riccardo Rolli:</strong> chitarra acustica, chitarra elettrica, cori</li>
+                        <li class="list-group-item"><strong>Pino Massara:</strong> tastiera</li>
+                        <li class="list-group-item"><strong>Alberto Mompellio:</strong> tastiera</li>
+                        <li class="list-group-item"><strong>Sergio Almangano:</strong> violino</li>
+                        <li class="list-group-item"><strong>Rossella Conz:</strong> voce</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+         <!-- Media aggiuntivi (sostituzione video live con contesto storico) -->
+         <div class="row mt-5">
+            <div class="col-12">
+               <h4>Contesto storico e influenza</h4>
+               <div class="row">
+                  <!-- Contesto storico al posto del video live -->
+                  <div class="col-md-6 mb-4">
+                     <div class="album-info-card">
+                        <h5 class="mb-3"><i class="bi bi-book me-2"></i> Contesto storico</h5>
+                        <p>"Fetus" è stato pubblicato in un periodo di grande fermento per la musica italiana, quando il progressive rock si stava affermando nel paese. All'epoca, Battiato era uno dei pionieri della musica elettronica sperimentale in Italia.</p>
+                        <p>Il disco si distingueva per l'uso innovativo di sintetizzatori e strumenti elettronici, in un'epoca in cui la musica pop italiana era ancora fortemente legata a schemi tradizionali. La scelta di tematiche filosofiche, scientifiche e distopiche anticipava tendenze che sarebbero emerse solo anni dopo.</p>
+                        <p>La natura provocatoria dell'album, sia nei contenuti che nella presentazione grafica, rispecchiava il clima culturale degli anni '70, caratterizzato da sperimentazione e rottura con le convenzioni.</p>
+                        <div class="d-flex justify-content-end">
+                           <a href="#" class="btn btn-outline-dark btn-sm mt-2">Approfondisci</a>
+                        </div>
+                     </div>
+                  </div>
+                  
+                  <!-- Galleria immagini (per dipinti/film) -->
+                  <div class="col-md-6">
+                     <div id="elementoCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                           <div class="carousel-item active">
+                              <img src="risorse/fetus2.jpg" class="d-block w-100 rounded" alt="foto secondaria1">
+                           </div>
+                           <div class="carousel-item">
+                              <img src="risorse/fetus3.jpg" class="d-block w-100 rounded" alt="foto secondaria2">
+                           </div>
+                           <div class="carousel-item">
+                              <img src="risorse/fetus4.jpg" class="d-block w-100 rounded" alt="foto secondaria3">
+                           </div>
+                           <div class="carousel-item">
+                              <img src="risorse/fetus5.jpg" class="d-block w-100 rounded" alt="foto secondaria4">
+                           </div>
+                           <div class="carousel-item">
+                              <img src="risorse/fetus6.jpg" class="d-block w-100 rounded" alt="foto secondaria5">
+                           </div>
+                           <div class="carousel-item">
+                              <img src="risorse/fetus7.jpg" class="d-block w-100 rounded" alt="foto secondaria6">
+                           </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#elementoCarousel" data-bs-slide="prev">
+                           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                           <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#elementoCarousel" data-bs-slide="next">
+                           <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                           <span class="visually-hidden">Next</span>
+                        </button>
+                     </div>
+                     <p class="text-muted mt-2">Immagini storiche</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <section class="related-items">
+        <div class="container">
+           <h3 class="mb-4">Opere correlate</h3>
+           <div class="row">
+              <!-- Item 1: Sulle corde di Aries -->
+              <div class="col-md-3">
+                 <div class="card related-item-card h-100">
+                    <img src="risorse/sullecordediaries.jpg" class="card-img-top" alt="Sulle corde di Aries">
+                    <div class="card-body">
+                       <h5 class="card-title">Sulle corde di Aries</h5>
+                       <p class="card-text text-muted">1973 - Sperimentale</p>
+                       <a href="#" class="btn btn-outline-dark btn-sm">Scopri</a>
+                    </div>
+                 </div>
+              </div>
+              
+              <!-- Item 2: Pollution -->
+              <div class="col-md-3">
+                 <div class="card related-item-card h-100">
+                    <img src="risorse/pollution.jpg" class="card-img-top" alt="Pollution">
+                    <div class="card-body">
+                       <h5 class="card-title">Pollution</h5>
+                       <p class="card-text text-muted">1974 - Sperimentale</p>
+                       <a href="#" class="btn btn-outline-dark btn-sm">Scopri</a>
+                    </div>
+                 </div>
+              </div>
+              
+              <!-- Item 3: Battiato -->
+              <div class="col-md-3">
+                 <div class="card related-item-card h-100">
+                    <img src="risorse/card3.jpg" class="card-img-top" alt="Battiato">
+                    <div class="card-body">
+                       <h5 class="card-title">L'Egitto Prima Delle Sabbie</h5>
+                       <p class="card-text text-muted">1978 - Rock</p>
+                       <a href="#" class="btn btn-outline-dark btn-sm">Scopri</a>
+                    </div>
+                 </div>
+              </div>
+              
+              <!-- Item 4: L'era del cinghiale bianco -->
+              <div class="col-md-3">
+                 <div class="card related-item-card h-100">
+                    <img src="risorse/card4.jpg" class="card-img-top" alt="L'era del cinghiale bianco">
+                    <div class="card-body">
+                       <h5 class="card-title">L'era del cinghiale bianco</h5>
+                       <p class="card-text text-muted">1979 - Pop sperimentale</p>
+                       <a href="#" class="btn btn-outline-dark btn-sm">Scopri</a>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </section>
+     
+      
+      <!-- Footer -->
+      <footer class="bg-dark text-light py-4 mt-5">
+         <div class="container text-center">
+            <div class="row">
+               <!-- Links principali -->
+               <div class="col-md-4">
+                  <h5>Informazioni</h5>
+                  <ul class="list-unstyled">
+                     <li><a href="#" class="text-light text-decoration-none">Credits</a></li>
+                     <li><a href="WPP.html" class="text-light text-decoration-none">Web Project Plan</a></li>
+                     <li><a href="#" class="text-light text-decoration-none">About Us</a></li>
+                  </ul>
+               </div>
+               <!-- Icone social -->
+               <div class="col-md-4">
+                  <h5>Seguici</h5>
+                  <a href="#" class="me-3">
+                  <img src="risorse/Instagram.png" alt="Instagram" width="30">
+                  </a>
+                  <a href="#" class="me-3">
+                  <img src="risorse/Facebook.png" alt="Facebook" width="30">
+                  </a>
+                  <a href="#">
+                  <img src="risorse/twitter.png" alt="X" width="30">
+                  </a>
+               </div>
+               <!-- Disclaimer -->
+               <div class="col-md-4">
+                  <h5>Note legali</h5>
+                  <p class="small">Progetto privo di scopo di lucro, finalità totalmente amatoriali. L'autore non si assume nessuna responsabilità legale.</p>
+               </div>
+            </div>
+            <!-- Copyright -->
+            <div class="mt-3">
+               <p class="small mb-0">&copy; 2025 Archivio Franco Battiato. Tutti i diritti riservati.</p>
+            </div>
+         </div>
+      </footer>
+      <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+   </body>
+</html>
