@@ -5,38 +5,116 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Archivio Franco Battiato</title>
       <!-- Google Fonts -->
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
       <!-- Bootstrap CSS -->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
       <style>
          body {
-         font-family: 'DM Sans', sans-serif;
+            font-family: 'DM Sans', sans-serif;
          }
          .navbar {
-         background-color: rgba(0, 0, 0, 0.5);
-         position: absolute;
-         width: 100%;
-         z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            width: 100%;
+            z-index: 1000;
          }
          .hero {
-         height: 85vh;
-         background: url('risorse/collezione.jpg') center/cover no-repeat;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         text-align: right;
-         color: white;
-         position: relative;
+            height: 85vh;
+            background: url('risorse/collezione.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: right;
+            color: white;
+            position: relative;
          }
          .hero h1 {
-         font-size: 3rem;
-         font-weight: bold;
-         text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+         }
+         .breadcrumb-wrapper {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            border-bottom: 1px solid #dee2e6;
+         }
+         .filter-section {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+         }
+         .filter-header {
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            font-weight: 600;
+         }
+         .filter-section .form-control,
+         .filter-section .form-select {
+            border-radius: 4px;
+            border: 1px solid #ddd;
+         }
+         .filter-section .btn-dark {
+            border-radius: 4px;
+         }
+         .album-card {
+            border: none;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 25px;
+            height: 100%;
+         }
+         .album-card:hover {
+            transform: translateY(-5px);
+         }
+         .album-card img {
+            height: 240px;
+            object-fit: cover;
+            width: 100%;
+         }
+         .album-card-body {
+            padding: 20px;
+         }
+         .album-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+         }
+         .album-category {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+         }
+         .discover-btn {
+            background-color: #212529;
+            color: white;
+            border: none;
+            padding: 8px 25px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+         }
+         .discover-btn:hover {
+            background-color: #000;
+            transform: scale(1.05);
+         }
+         .filter-group {
+            margin-bottom: 20px;
+         }
+         .filter-group .filter-title {
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: #333;
          }
       </style>
    </head>
    <body>
-      <!-- Navbar trasparente sopra l'immagine -->
+      <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark">
          <div class="container">
             <a class="navbar-brand" href="index.html">
@@ -75,375 +153,311 @@
             </div>
          </div>
       </nav>
-      <!-- breadcrumb da mettere trasparente sopra al hero -->
-      <nav style="--bs-breadcrumb-divider: '>'; position: absolute; top: 80px; left: 0; width: 100%; background: transparent; z-index: 1050;" aria-label="breadcrumb">
-         <div class="container mt-4">
-            <ol class="breadcrumb" style="background: transparent; margin: 0; padding: 0 15px; font-size: 1.35rem;">
-               <li class="breadcrumb-item" style="text-shadow: 2px 2px 5px rgba(0,0,0,0.8);">
-                  <a href="index.html" style="color: white; text-shadow: 2px 2px 5px rgba(0,0,0,0.8);">Home</a>
-               </li>
-               <li class="breadcrumb-item active" aria-current="page" style="color: white; text-shadow: 2px 2px 5px rgba(0,0,0,0.8);">Collezione</li>
-            </ol>
-         </div>
-      </nav>
+
       <!-- Hero Section -->
       <section class="hero">
          <div class="container mt-4">
             <h1>La Collezione</h1>
          </div>
       </section>
-      <!-- Contenitore principaleeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
-      <div class="container">
-         <section class="container-fluid my-3">
-            <div class="row">
-               <div class="col-md-3">
-                  <!-- Filtri -->
-                  <div class="accordion" id="accordionBattiato">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilters" aria-controls="collapseFilters" aria-expanded="true">
-                          <strong>Filtri di Ricerca</strong>
-                        </button>
-                      </h2>
-                      <div id="collapseFilters" class="accordion-collapse collapse show" data-bs-parent="#accordionBattiato">
-                        <div class="accordion-body" style="padding: 1.5rem; border: 1px solid #ddd; border-top: none;">
-                          <div class="accordion accordion-flush" id="accordionFlushBattiato">
-                            <!-- Ordina per Criterio e Direzione -->
-                            <div class="accordion-item">
-                              <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-orderFilter" aria-expanded="true" aria-controls="flush-orderFilter">
-                                  Ordina per:
-                                </button>
-                              </h2>
-                              <div id="flush-orderFilter" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushBattiato">
-                                <div class="accordion-body">
-                                  <form>
-                                    <div class="mb-3">
-                                      <label for="orderCriteria" class="form-label">Scegli il criterio:</label>
-                                      <select class="form-select" id="orderCriteria">
-                                        <option value="date">Data di Pubblicazione</option>
-                                        <option value="title">Titolo</option>
-                                        <option value="duration">Durata</option>
-                                      </select>
-                                    </div>
-                                    <div class="mb-3">
-                                      <label class="form-label">Direzione:</label>
-                                      <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="orderDirection" id="ascending" value="asc" checked>
-                                        <label class="form-check-label" for="ascending">
-                                          Ascendente
-                                        </label>
-                                      </div>
-                                      <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="orderDirection" id="descending" value="desc">
-                                        <label class="form-check-label" for="descending">
-                                          Discendente
-                                        </label>
-                                      </div>
-                                    </div>
-                                    <button type="button" class="btn btn-dark">Applica Ordinamento</button>
-                                  </form>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Filtro per Anno -->
-                            <div class="accordion-item">
-                              <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-yearFilter" aria-expanded="true" aria-controls="flush-yearFilter">
-                                  Filtro per Anno:
-                                </button>
-                              </h2>
-                              <div id="flush-yearFilter" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushBattiato">
-                                <div class="accordion-body">
-                                  <p>Seleziona un intervallo di anni:</p>
-                                  <label for="yearFrom">Da: </label>
-                                  <input type="number" id="yearFrom" name="yearFrom" min="1900" max="2100">
-                                  <label class="pl-2" for="yearTo">A: </label>
-                                  <input class="pl-2" type="number" id="yearTo" name="yearTo" min="1900" max="2100">
-                                  <button type="button" class="btn btn-dark mt-2">Cerca</button>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Tipologia Opera -->
-                            <div class="accordion-item">
-                              <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-typeFilter" aria-expanded="true" aria-controls="flush-typeFilter">
-                                  Tipologia Opera:
-                                </button>
-                              </h2>
-                              <div id="flush-typeFilter" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushBattiato">
-                                <div class="accordion-body scrollbar">
-                                  <ul class="list-group">
-                                    <li class="list-group-item">
-                                      <label class="form-check-label stretched-link" for="checkbox-album">Album Musicali</label>
-                                      <input class="form-check-input me-1" type="checkbox" id="checkbox-album">
-                                    </li>
-                                    <li class="list-group-item">
-                                      <label class="form-check-label stretched-link" for="checkbox-film">Film</label>
-                                      <input class="form-check-input me-1" type="checkbox" id="checkbox-film">
-                                    </li>
-                                    <li class="list-group-item">
-                                      <label class="form-check-label stretched-link" for="checkbox-dipinti">Dipinti</label>
-                                      <input class="form-check-input me-1" type="checkbox" id="checkbox-dipinti">
-                                    </li>
-                                    <li class="list-group-item">
-                                      <label class="form-check-label stretched-link" for="checkbox-registrazioni">Registrazioni</label>
-                                      <input class="form-check-input me-1" type="checkbox" id="checkbox-registrazioni">
-                                    </li>
-                                    <li class="list-group-item">
-                                      <label class="form-check-label stretched-link" for="checkbox-altro">Altri Media</label>
-                                      <input class="form-check-input me-1" type="checkbox" id="checkbox-altro">
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Ricerca per Titolo -->
-                            <div class="accordion-item">
-                              <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-titleFilter" aria-expanded="true" aria-controls="flush-titleFilter">
-                                  Ricerca per Keyword:
-                                </button>
-                              </h2>
-                              <div id="flush-titleFilter" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushBattiato">
-                                <div class="accordion-body">
-                                  <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Inserisci Keyword" aria-label="Ricerca" aria-describedby="button-title-search">
-                                    <button class="btn btn-dark" type="button" id="button-title-search">Cerca</button>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Filtro per Durata -->
-                            <div class="accordion-item">
-                              <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-durationFilter" aria-expanded="true" aria-controls="flush-durationFilter">
-                                  Filtra per Durata (minuti):
-                                </button>
-                              </h2>
-                              <div id="flush-durationFilter" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushBattiato">
-                                <div class="accordion-body">
-                                  <p>Seleziona la durata massima:</p>
-                                  <div class="d-flex align-items-center">
-                                    <input type="range" class="form-range me-2" id="durationRange" min="0" max="240" step="5" oninput="document.getElementById('durationValue').innerText = this.value">
-                                    <span id="durationValue">0</span> minuti
-                                  </div>
-                                  <button type="button" class="btn btn-dark mt-2">Applica Filtro</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div><!-- Fine accordion interno -->
+
+      <!-- Breadcrumb -->
+      <div class="breadcrumb-wrapper">
+         <div class="container">
+            <nav aria-label="breadcrumb">
+               <ol class="breadcrumb mb-0">
+                  <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Collezione</li>
+               </ol>
+            </nav>
+         </div>
+      </div>
+
+      <!-- Contenitore principale -->
+      <div class="container py-5">
+         <div class="row">
+            <div class="col-md-3">
+               <div class="filter-section">
+                  <h4 class="filter-header">Filtri di Ricerca</h4>
+                  
+                  <!-- Ordina per -->
+                  <div class="filter-group">
+                     <h5 class="filter-title">Ordina per:</h5>
+                     <div class="mb-3">
+                        <label for="orderCriteria" class="form-label">Scegli il criterio:</label>
+                        <select class="form-select" id="orderCriteria">
+                           <option value="date">Data di Pubblicazione</option>
+                           <option value="title">Titolo</option>
+                           <option value="duration">Durata</option>
+                        </select>
+                     </div>
+                     <div class="mb-3">
+                        <label class="form-label">Direzione:</label>
+                        <div class="form-check">
+                           <input class="form-check-input" type="radio" name="orderDirection" id="ascending" value="asc" checked>
+                           <label class="form-check-label" for="ascending">
+                              Ascendente
+                           </label>
                         </div>
-                      </div>
-                    </div>
+                        <div class="form-check">
+                           <input class="form-check-input" type="radio" name="orderDirection" id="descending" value="desc">
+                           <label class="form-check-label" for="descending">
+                              Discendente
+                           </label>
+                        </div>
+                     </div>
+                     <button type="button" class="btn btn-dark">Applica Ordinamento</button>
                   </div>
                   
+                  <!-- Filtro per Anno -->
+                  <div class="filter-group">
+                     <h5 class="filter-title">Filtro per Anno:</h5>
+                     <div class="mb-3">
+                        <div class="row">
+                           <div class="col-6">
+                              <label for="yearFrom">Da: </label>
+                              <input type="number" class="form-control" id="yearFrom" name="yearFrom" min="1900" max="2100">
+                           </div>
+                           <div class="col-6">
+                              <label for="yearTo">A: </label>
+                              <input type="number" class="form-control" id="yearTo" name="yearTo" min="1900" max="2100">
+                           </div>
+                        </div>
+                     </div>
+                     <button type="button" class="btn btn-dark">Cerca</button>
+                  </div>
+                  
+                  <!-- Tipologia Opera -->
+                  <div class="filter-group">
+                     <h5 class="filter-title">Tipologia Opera:</h5>
+                     <div class="mb-3">
+                        <div class="form-check mb-2">
+                           <input class="form-check-input" type="checkbox" id="checkbox-album">
+                           <label class="form-check-label" for="checkbox-album">Album Musicali</label>
+                        </div>
+                        <div class="form-check mb-2">
+                           <input class="form-check-input" type="checkbox" id="checkbox-film">
+                           <label class="form-check-label" for="checkbox-film">Film</label>
+                        </div>
+                        <div class="form-check mb-2">
+                           <input class="form-check-input" type="checkbox" id="checkbox-dipinti">
+                           <label class="form-check-label" for="checkbox-dipinti">Dipinti</label>
+                        </div>
+                        <div class="form-check mb-2">
+                           <input class="form-check-input" type="checkbox" id="checkbox-registrazioni">
+                           <label class="form-check-label" for="checkbox-registrazioni">Registrazioni</label>
+                        </div>
+                        <div class="form-check mb-2">
+                           <input class="form-check-input" type="checkbox" id="checkbox-altro">
+                           <label class="form-check-label" for="checkbox-altro">Altri Media</label>
+                        </div>
+                     </div>
+                  </div>
+                  
+                  <!-- Ricerca per Keyword -->
+                  <div class="filter-group">
+                     <h5 class="filter-title">Ricerca per Keyword:</h5>
+                     <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Inserisci Keyword" aria-label="Ricerca">
+                        <button class="btn btn-dark" type="button">Cerca</button>
+                     </div>
+                  </div>
+                  
+                  <!-- Filtro per Durata -->
+                  <div class="filter-group">
+                     <h5 class="filter-title">Filtra per Durata (minuti):</h5>
+                     <div class="mb-3">
+                        <div class="d-flex align-items-center mb-2">
+                           <input type="range" class="form-range me-2" id="durationRange" min="0" max="240" step="5" oninput="document.getElementById('durationValue').innerText = this.value">
+                           <span id="durationValue">0</span> minuti
+                        </div>
+                        <button type="button" class="btn btn-dark">Applica Filtro</button>
+                     </div>
+                  </div>
+               </div>
             </div>
-
-
-            <div class="col-md-9 my-3">
-              <!-- Riga 1 -->
-              <div class="row">
-                <!-- Card 1: Fetus (1972) -->
-                <div class="col-md-4 d-flex flex-fill">
-                  <div class="card mx-auto d-block my-3 text-center" style="width: 18rem;">
-                    <a href="fetus.html">
-                      <img src="risorse/card1.jpg" class="card-img-top" alt="Fetus">
-                    </a>
-                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                      <h5 class="card-title">Fetus (1972)</h5>
-                      <p class="card-text">Il primo album sperimentale che segna l'inizio della carriera, ricco di sonorità d'avanguardia.</p>
-                      <div class="DC.Date mt-4">1972</div>
-                      <a href="fetus.html" class="btn btn-dark mt-2">Scopri l'opera</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card 2: Juke Box (1977) -->
-                <div class="col-md-4 d-flex flex-fill">
-                  <div class="card mx-auto d-block my-3 text-center" style="width: 18rem;">
-                    <a href="#">
-                      <img src="risorse/card2.jpg" class="card-img-top" alt="Juke Box">
-                    </a>
-                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                      <h5 class="card-title">Juke Box (1977)</h5>
-                      <p class="card-text">Un album che anticipa il passaggio verso una musica più accessibile, mantenendo un tocco sperimentale.</p>
-                      <div class="DC.Date mt-4">1977</div>
-                      <a href="#" class="btn btn-dark mt-2">Scopri l'opera</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card 3: L'Egitto prima delle sabbie (1978) -->
-                <div class="col-md-4 d-flex flex-fill">
-                  <div class="card mx-auto d-block my-3 text-center" style="width: 18rem;">
-                    <a href="#">
-                      <img src="risorse/card3.jpg" class="card-img-top" alt="L'Egitto prima delle sabbie">
-                    </a>
-                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                      <h5 class="card-title">L'Egitto Prima Delle Sabbie (1978)</h5>
-                      <p class="card-text">Un'opera innovativa che gli valse il premio Stockhausen per la sua originalità.</p>
-                      <div class="DC.Date mt-4">1978</div>
-                      <a href="#" class="btn btn-dark mt-2">Scopri l'opera</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Riga 2 -->
-              <div class="row">
-                <!-- Card 4: L'era del cinghiale bianco (1979) -->
-                <div class="col-md-4 d-flex flex-fill">
-                  <div class="card mx-auto d-block my-3 text-center" style="width: 18rem;">
-                    <a href="#">
-                      <img src="risorse/card4.jpg" class="card-img-top" alt="L'era del cinghiale bianco">
-                    </a>
-                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                      <h5 class="card-title">L'era del cinghiale bianco (1979)</h5>
-                      <p class="card-text">Il primo album EMI che mescola elettronica, new wave e pop, aprendo una nuova era nella musica italiana.</p>
-                      <div class="DC.Date mt-4">1979</div>
-                      <a href="#" class="btn btn-dark mt-2">Scopri l'opera</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card 5: La voce del padrone (1981) -->
-                <div class="col-md-4 d-flex flex-fill">
-                  <div class="card mx-auto d-block my-3 text-center" style="width: 18rem;">
-                    <a href="#">
-                      <img src="risorse/card5.jpg" class="card-img-top" alt="La voce del padrone">
-                    </a>
-                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                      <h5 class="card-title">La voce del padrone (1981)</h5>
-                      <p class="card-text">Un album epocale che ha venduto oltre un milione di copie, diventato un punto di riferimento del pop italiano.</p>
-                      <div class="DC.Date mt-4">1981</div>
-                      <a href="#" class="btn btn-dark mt-2">Scopri l'opera</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card 6: Fisiognomica (1988) -->
-                <div class="col-md-4 d-flex flex-fill">
-                  <div class="card mx-auto d-block my-3 text-center" style="width: 18rem;">
-                    <a href="#">
-                      <img src="risorse/card6.jpg" class="card-img-top" alt="Fisiognomica">
-                    </a>
-                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                      <h5 class="card-title">Fisiognomica (1988)</h5>
-                      <p class="card-text">Album che unisce pop e spiritualità, con testi profondi e arrangiamenti innovativi.</p>
-                      <div class="DC.Date mt-4">1988</div>
-                      <a href="#" class="btn btn-dark mt-2">Scopri l'opera</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Riga 3 -->
-              <div class="row">
-                <!-- Card 7: Come un cammello in una grondaia (1991) -->
-                <div class="col-md-4 d-flex flex-fill">
-                  <div class="card mx-auto d-block my-3 text-center" style="width: 18rem;">
-                    <a href="#">
-                      <img src="risorse/card7.jpg" class="card-img-top" alt="Come un cammello in una grondaia">
-                    </a>
-                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                      <h5 class="card-title">Come un cammello in una grondaia (1991)</h5>
-                      <p class="card-text">Album che fonde l'interpretazione di lieder classici con nuove composizioni, simbolo di impegno civile.</p>
-                      <div class="DC.Date mt-4">1991</div>
-                      <a href="#" class="btn btn-dark mt-2">Scopri l'opera</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card 8: Dervisci Danzanti (1996) -->
-                <div class="col-md-4 d-flex flex-fill">
-                  <div class="card mx-auto d-block my-3 text-center" style="width: 18rem;">
-                    <a href="#">
-                      <img src="risorse/card8.jpg" class="card-img-top" alt="Dervisci Danzanti">
-                    </a>
-                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                      <h5 class="card-title">Dervisci Danzanti (1996)</h5>
-                      <p class="card-text">Dipinto raffigurante dervisci in estasi mistica, simbolo dell'ascesa spirituale e della connessione divina.</p>
-                      <div class="DC.Date mt-4">1996</div>
-                      <a href="#" class="btn btn-dark mt-2">Scopri l'opera</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card 9: Gommalacca (1998) -->
-                <div class="col-md-4 d-flex flex-fill">
-                  <div class="card mx-auto d-block my-3 text-center" style="width: 18rem;">
-                    <a href="#">
-                      <img src="risorse/card9.jpg" class="card-img-top" alt="Gommalacca">
-                    </a>
-                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                      <h5 class="card-title">Gommalacca (1998)</h5>
-                      <p class="card-text">Album energico che miscela rock, elettronica e sonorità futuristiche, con il celebre brano "Shock in my town".</p>
-                      <div class="DC.Date mt-4">1998</div>
-                      <a href="#" class="btn btn-dark mt-2">Scopri l'opera</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Riga 4 -->
-              <div class="row">
-                <!-- Card 10: Perdutoamor (2003, Film) -->
-                <div class="col-md-4 d-flex flex-fill">
-                  <div class="card mx-auto d-block my-3 text-center" style="width: 18rem;">
-                    <a href="#">
-                      <img src="risorse/card10.jpg" class="card-img-top" alt="Perdutoamor">
-                    </a>
-                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                      <h5 class="card-title">Perdutoamor (2003)</h5>
-                      <p class="card-text">Il debutto cinematografico di Battiato, un film d'autore con una colonna sonora intensa che attraversa due città.</p>
-                      <div class="DC.Date mt-4">2003</div>
-                      <a href="#" class="btn btn-dark mt-2">Guarda il film</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card 11: Musikanten (2005, Film) -->
-                <div class="col-md-4 d-flex flex-fill">
-                  <div class="card mx-auto d-block my-3 text-center" style="width: 18rem;">
-                    <a href="#">
-                      <img src="risorse/card11.jpg" class="card-img-top" alt="Musikanten">
-                    </a>
-                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                      <h5 class="card-title">Musikanten (2005)</h5>
-                      <p class="card-text">Film sperimentale che offre una visione inedita degli ultimi anni di Beethoven, diretto da Alejandro Jodorowsky.</p>
-                      <div class="DC.Date mt-4">2005</div>
-                      <a href="#" class="btn btn-dark mt-2">Guarda il film</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card 12: Torneremo ancora (2019) -->
-                <div class="col-md-4 d-flex flex-fill">
-                  <div class="card mx-auto d-block my-3 text-center" style="width: 18rem;">
-                    <a href="#">
-                      <img src="risorse/card12.jpg" class="card-img-top" alt="Torneremo ancora">
-                    </a>
-                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                      <h5 class="card-title">Torneremo ancora (2019)</h5>
-                      <p class="card-text">L'ultimo album di Battiato, un testamento musicale che unisce orchestrazioni inedite e nuove versioni dei suoi classici.</p>
-                      <div class="DC.Date mt-4">2019</div>
-                      <a href="#" class="btn btn-dark mt-2">Scopri l'opera</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Pagination -->
-              <nav aria-label="Page navigation">
-                <ul class="pagination justify-content-center">
-                  <li class="page-item disabled">
-                    <a class="page-link">Precedente</a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">Successivo</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            
-
-
-
-         </section>
+<!-- CONTENUTO DELLE OPERE -->
+<div class="col-md-9">
+  <div class="row">
+     <!-- Album 1 -->
+     <div class="col-md-4 mb-4">
+        <div class="album-card">
+           <img src="risorse/card1.jpg" alt="Fetus" class="card-img-top">
+           <div class="album-card-body">
+              <h5 class="album-title">Fetus</h5>
+              <div class="album-category">1972 - Sperimentale</div>
+              <p class="album-description">Il primo album sperimentale che segna l'inizio della carriera, ricco di sonorità d'avanguardia.</p>
+              <a href="fetus.html" class="btn btn-outline-dark btn-sm">Scopri</a>
+           </div>
+        </div>
+     </div>
+     
+     <!-- Album 2 -->
+     <div class="col-md-4 mb-4">
+        <div class="album-card">
+           <img src="risorse/card2.jpg" alt="Juke Box" class="card-img-top">
+           <div class="album-card-body">
+              <h5 class="album-title">Juke Box</h5>
+              <div class="album-category">1977 - Sperimentale</div>
+              <p class="album-description">Un album che anticipa il passaggio verso una musica più accessibile, mantenendo un tocco sperimentale.</p>
+              <a href="#" class="btn btn-outline-dark btn-sm">Scopri</a>
+           </div>
+        </div>
+     </div>
+     
+     <!-- Album 3 -->
+     <div class="col-md-4 mb-4">
+        <div class="album-card">
+           <img src="risorse/card3.jpg" alt="L'Egitto Prima Delle Sabbie" class="card-img-top">
+           <div class="album-card-body">
+              <h5 class="album-title">L'Egitto Prima Delle Sabbie</h5>
+              <div class="album-category">1978 - Rock</div>
+              <p class="album-description">Un'opera innovativa che gli valse il premio Stockhausen per la sua originalità.</p>
+              <a href="#" class="btn btn-outline-dark btn-sm">Scopri</a>
+           </div>
+        </div>
+     </div>
+     
+     <!-- Album 4 -->
+     <div class="col-md-4 mb-4">
+        <div class="album-card">
+           <img src="risorse/card4.jpg" alt="L'era del cinghiale bianco" class="card-img-top">
+           <div class="album-card-body">
+              <h5 class="album-title">L'era del cinghiale bianco</h5>
+              <div class="album-category">1979 - Pop sperimentale</div>
+              <p class="album-description">Il primo album EMI che mescola elettronica, new wave e pop, aprendo una nuova era nella musica italiana.</p>
+              <a href="#" class="btn btn-outline-dark btn-sm">Scopri</a>
+           </div>
+        </div>
+     </div>
+     
+     <!-- Album 5 -->
+     <div class="col-md-4 mb-4">
+        <div class="album-card">
+           <img src="risorse/card5.jpg" alt="La voce del padrone" class="card-img-top">
+           <div class="album-card-body">
+              <h5 class="album-title">La voce del padrone</h5>
+              <div class="album-category">1981 - Pop</div>
+              <p class="album-description">Un album epocale che ha venduto oltre un milione di copie, diventato un punto di riferimento del pop italiano.</p>
+              <a href="#" class="btn btn-outline-dark btn-sm">Scopri</a>
+           </div>
+        </div>
+     </div>
+     
+     <!-- Album 6 -->
+     <div class="col-md-4 mb-4">
+        <div class="album-card">
+           <img src="risorse/card6.jpg" alt="Fisiognomica" class="card-img-top">
+           <div class="album-card-body">
+              <h5 class="album-title">Fisiognomica</h5>
+              <div class="album-category">1988 - Pop sperimentale</div>
+              <p class="album-description">Album che unisce pop e spiritualità, con testi profondi e arrangiamenti innovativi.</p>
+              <a href="#" class="btn btn-outline-dark btn-sm">Scopri</a>
+           </div>
+        </div>
+     </div>
+     
+     <!-- Album 7 -->
+     <div class="col-md-4 mb-4">
+        <div class="album-card">
+           <img src="risorse/card7.jpg" alt="Come un cammello in una grondaia" class="card-img-top">
+           <div class="album-card-body">
+              <h5 class="album-title">Come un cammello in una grondaia</h5>
+              <div class="album-category">1991 - Elettronica</div>
+              <p class="album-description">Album che fonde l'interpretazione di lieder classici con nuove composizioni, simbolo di impegno civile.</p>
+              <a href="#" class="btn btn-outline-dark btn-sm">Scopri</a>
+           </div>
+        </div>
+     </div>
+     
+     <!-- Album 8 -->
+     <div class="col-md-4 mb-4">
+      <div class="album-card">
+         <img src="risorse/card8.jpg" alt="dervisci danzanti" class="card-img-top">
+         <div class="album-card-body">
+            <h5 class="album-title">Dervisci Danzanti</h5>
+            <div class="album-category">1996 - Dipinto</div>
+            <p class="album-description">Dipinto raffigurante dervisci in estasi mistica, simbolo dell'ascesa spirituale e della connessione divina.</p>
+            <a href="dervisci.html" class="btn btn-outline-dark btn-sm">Scopri</a>
+         </div>
       </div>
-      <!-- FINEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE -->
+   </div>
+   
+     <!-- Album 9 -->
+     <div class="col-md-4 mb-4">
+        <div class="album-card">
+           <img src="risorse/card9.jpg" alt="Gommalacca" class="card-img-top">
+           <div class="album-card-body">
+              <h5 class="album-title">Gommalacca</h5>
+              <div class="album-category">1998 - Rock elettronico</div>
+              <p class="album-description">Album energico che miscela rock, elettronica e sonorità futuristiche, con il celebre brano "Shock in my town".</p>
+              <a href="#" class="btn btn-outline-dark btn-sm">Scopri</a>
+           </div>
+        </div>
+     </div>
+     
+     <!-- Film 1: Perdutoamor -->
+     <div class="col-md-4 mb-4">
+        <div class="album-card">
+           <img src="risorse/card10.jpg" alt="Perdutoamor" class="card-img-top">
+           <div class="album-card-body">
+              <h5 class="album-title">Perdutoamor</h5>
+              <div class="album-category">2003 - Film</div>
+              <p class="album-description">Il debutto cinematografico di Battiato, un film d'autore con una colonna sonora intensa che attraversa due città.</p>
+              <a href="#" class="btn btn-outline-dark btn-sm">Guarda il film</a>
+           </div>
+        </div>
+     </div>
+     
+     <!-- Film 2: Musikanten -->
+     <div class="col-md-4 mb-4">
+        <div class="album-card">
+           <img src="risorse/card11.jpg" alt="Musikanten" class="card-img-top">
+           <div class="album-card-body">
+              <h5 class="album-title">Musikanten</h5>
+              <div class="album-category">2005 - Film</div>
+              <p class="album-description">Film sperimentale che offre una visione inedita degli ultimi anni di Beethoven, diretto da Alejandro Jodorowsky.</p>
+              <a href="#" class="btn btn-outline-dark btn-sm">Guarda il film</a>
+           </div>
+        </div>
+     </div>
+     
+     <!-- Album 10: Torneremo ancora -->
+     <div class="col-md-4 mb-4">
+        <div class="album-card">
+           <img src="risorse/card12.jpg" alt="Torneremo ancora" class="card-img-top">
+           <div class="album-card-body">
+              <h5 class="album-title">Torneremo ancora</h5>
+              <div class="album-category">2019 - Classica</div>
+              <p class="album-description">L'ultimo album di Battiato, un testamento musicale che unisce orchestrazioni inedite e nuove versioni dei suoi classici.</p>
+              <a href="#" class="btn btn-outline-dark btn-sm">Scopri</a>
+           </div>
+        </div>
+     </div>
+  </div>
+  
+  <!-- Pagination -->
+  <nav aria-label="Page navigation">
+     <ul class="pagination justify-content-center mt-4">
+        <li class="page-item disabled">
+           <a class="page-link">Precedente</a>
+        </li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+           <a class="page-link" href="#">Successivo</a>
+        </li>
+     </ul>
+  </nav>
+</div>
+
+
+
+
+         </div>
+      </div>
+
       <!-- Footer -->
       <footer class="bg-dark text-light py-4 mt-5">
          <div class="container text-center">
@@ -484,6 +498,5 @@
       </footer>
       <!-- Bootstrap JS -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
    </body>
 </html>

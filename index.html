@@ -13,7 +13,6 @@
             font-family: 'DM Sans', sans-serif;
         }
 
-        /* Navbar trasparente sopra l'immagine */
         .navbar {
             background-color: rgba(0, 0, 0, 0.5);
             position: absolute;
@@ -21,7 +20,6 @@
             z-index: 1000;
         }
 
-        /* Hero Section */
         .hero {
             height: 85vh;
             background: url('risorse/SfondoBattiato.jpg') center/cover no-repeat;
@@ -48,15 +46,13 @@
         }
 
         
-        /* Stile per rendere il carosello più armonioso */
         .carousel-inner img {
-            height: 500px;  /* Altezza fissa per evitare salti */
-            object-fit: cover;  /* Mantiene il focus sulle immagini */
-            border-radius: 10px; /* Angoli arrotondati per un aspetto più morbido */
+            height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
             filter: grayscale(100%);
         }
 
-        /* Personalizzazione del bottone */
         .carousel-caption .btn {
             background: rgba(0, 0, 0, 0.7);
             color: white;
@@ -76,7 +72,6 @@
             border: none;
         }
 
-        /* Stile del cursore per WebKit (Chrome, Safari) */
         .range-style::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
@@ -99,7 +94,7 @@
 
         .image-container {
             position: relative;
-            display: inline-block; /* o block per larghezza piena */
+            display: inline-block;
             max-width: 100%;
         }
 
@@ -119,22 +114,22 @@
             padding: 30px;
             box-sizing: border-box;
             text-align: left;
-            min-height: 30%; /* Aumenta la copertura dell'overlay */
+            min-height: 30%;
         }
         .overlay p {
             margin: 0;
-            padding-top: 50px; /* Sposta il testo più in basso */
+            padding-top: 50px;
         }
 
         #yearDisplay {
-            font-size: 2rem; /* Aumenta la dimensione del testo */
-            font-weight: bold; /* Rende il testo in grassetto */
+            font-size: 2rem;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-<!-- Navbar trasparente sopra l'immagine -->
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
         <a class="navbar-brand" href="index.html">
@@ -202,7 +197,7 @@
         <p class="lead">Oltre alla musica, Battiato si distingue nel cinema e nella pittura. Nel 2003, debutta come regista con "Perduto amor", vincendo il Nastro d'Argento come miglior regista esordiente. La sua passione per l'arte visiva lo porta a esporre le sue opere pittoriche, dimostrando la sua versatilità creativa.</p>
         <p class="lead">Franco Battiato è scomparso nel 2021, lasciando un'eredità culturale che continua a influenzare artisti e appassionati. La sua opera rimane un invito a non accontentarsi, a cercare sempre nuove prospettive e a celebrare la ricchezza della cultura in tutte le sue forme.</p>
         <div class="d-flex justify-content-center mt-3">
-            <button class="btn btn-dark">Biografia completa</button>
+            <a href="#" class="btn btn-outline-dark btn-sm">Biografia completa</a>
         </div>
     </div>
     <!-- Contenitore del carosello -->
@@ -283,7 +278,6 @@
         const periodDescription = document.getElementById("periodDescription");
         const button = document.getElementById("searchButton");
     
-        // Funzione per aggiornare titolo e immagine in base all'anno
         function updatePeriod() {
             const year = parseInt(slider.value);
             display.textContent = year;
@@ -326,14 +320,12 @@
             }
         }
     
-        // Aggiorna il contenuto ogni volta che si sposta lo slider
         slider.addEventListener("input", updatePeriod);
     
         button.addEventListener("click", function () {
             alert("Ricerca avviata per l'anno: " + slider.value);
         });
     
-        // Inizializza il contenuto al caricamento della pagina
         updatePeriod();
         });
     </script>

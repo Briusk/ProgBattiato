@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="it">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Archivio Franco Battiato</title>
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+      <style>
+         body {
+            font-family: 'DM Sans', sans-serif;
+            padding-top: 0;
+         }
+         .navbar {
+            background-color: #000000;
+         }
+         .elemento-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+         }
+         .elemento-info-table {
+            margin-top: 20px;
+            margin-bottom: 30px;
+         }
+         .elemento-info-table th {
+            width: 30%;
+            background-color: #f8f9fa;
+         }
+         .elemento-details {
+            margin-top: 20px;
+            margin-bottom: 30px;
+         }
+         .related-items {
+            background-color: #f8f9fa;
+            padding: 30px 0;
+            margin-top: 40px;
+         }
+         .related-item-card {
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+         }
+         .related-item-card:hover {
+            transform: translateY(-5px);
+         }
+         .quote-container {
+            background-color: #f8f9fa;
+            border-left: 4px solid #6c757d;
+            padding: 20px;
+            margin: 20px 0;
+         }
+         .breadcrumb-wrapper {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            border-bottom: 1px solid #dee2e6;
+         }
+         .painting-showcase {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+         }
+         .painting-frame {
+            padding: 20px;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+         <div class="container">
+            <a class="navbar-brand" href="index.html">
+            <img src="risorse/logoB.png" alt="Logo" height="60" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav ms-auto">
+                  <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="collezione.html">Collezione</a></li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Approfondisci</a>
+                     <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Musica</a></li>
+                        <li><a class="dropdown-item" href="#">Cinema</a></li>
+                        <li><a class="dropdown-item" href="#">Pittura</a></li>
+                        <li><a class="dropdown-item" href="#">Altri media</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Esplora</a>
+                     <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Biografia</a></li>
+                      <li>
+                         <hr class="dropdown-divider">
+                      </li>
+                      <li><a class="dropdown-item" href="#">L'Ottava</a></li>
+                      <li><a class="dropdown-item" href="#">Bibliografia</a></li>
+                      <li><a class="dropdown-item" href="#">La Fondazione</a></li>
+                   </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="mappa.html">Mappiato</a></li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      
+      <!-- breadcrumb -->
+      <div class="breadcrumb-wrapper">
+         <div class="container">
+            <nav aria-label="breadcrumb">
+               <ol class="breadcrumb mb-0">
+                  <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
+                  <li class="breadcrumb-item"><a href="collezione.html" class="text-decoration-none">Collezione</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Dervisci Danzanti</li>
+               </ol>
+            </nav>
+         </div>
+      </div>
+      
+      <!-- Contenitore principale -->
+      <div class="container elemento-details">
+         <div class="row mt-4 mb-4">
+            <div class="col-12">
+               <div class="d-flex align-items-center">
+                  <h2 class="mb-0">Dervisci Danzanti</h2>
+               </div>
+               <p class="text-muted mt-2">Dipinto (1996)</p>
+            </div>
+         </div>
+        <div class="painting-showcase">
+            <div class="painting-frame">
+            <img src="risorse/dervisci1.jpg" alt="Dervisci Danzanti di Franco Battiato" class="img-fluid"">
+            </div>
+        </div>
+         
+         <!-- Contenuto principale con descrizione -->
+         <div class="row">
+            <!-- Colonna sinistra -->
+            <div class="col-md-5">
+               <p class="text-muted fst-italic mt-3">Opera realizzata con tecnica a olio, raffigurante dei dervisci nell'atto della danza rotante.</p>
+               
+               <!-- Tabella informazioni tecniche -->
+               <div class="elemento-info-table">
+                  <h4 class="my-2">Informazioni tecniche</h4>
+                  <table class="table table-bordered">
+                     <tbody>
+                        <tr>
+                           <th>Artista</th>
+                           <td>Franco Battiato (Süphan Barzani)</td>
+                        </tr>
+                        <tr>
+                           <th>Anno</th>
+                           <td>1996</td>
+                        </tr>
+                        <tr>
+                           <th>Tecnica</th>
+                           <td>Olio su tavola dorata</td>
+                        </tr>
+                        <tr>
+                           <th>Periodo</th>
+                           <td>Ciclo mistico</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+            
+            <!-- Colonna destra con descrizione e contenuti aggiuntivi -->
+            <div class="col-md-7">
+               <div>
+                  <h4>Il dipinto</h4>
+                  <p>"<strong>Dervisci Danzanti</strong>" è uno dei dipinti più rappresentativi del ciclo mistico di Franco Battiato, realizzato nel periodo tra il 1990 e il 2000. L'opera raffigura la danza rotante (Sama) dei dervisci, figura tipica della tradizione sufi a cui l'artista era profondamente legato. La composizione è dominata dallo sfondo dorato, elemento ricorrente nella produzione pittorica di Battiato che richiama la purezza e l'ascensione spirituale.</p>
+                <div class="quote-container">
+                    <p class="mb-0">"Un bel giorno all'improvviso la figura di un danzatore derviscio si materializzò sulla tela, nel modo giusto, nel modo che volevo. Fu una gioia immensa, anzi di più. Fu un orgasmo cosmico."</p>
+                    <p class="text-end mb-0"><small>— Franco Battiato</small></p>
+                </div>
+                </div>
+            </div>
+         </div>
+      </div>
+      
+      <section class="related-items">
+        <div class="container">
+           <h3 class="mb-4">Opere correlate</h3>
+           <div class="row">
+              <!-- Item 1 -->
+              <div class="col-md-3">
+                 <div class="card related-item-card h-100">
+                    <img src="risorse/dervisci2.jpg" class="card-img-top" alt="Donna con rosa">
+                    <div class="card-body">
+                       <h5 class="card-title">Donna con rosa</h5>
+                       <p class="card-text text-muted">1999 - Pittura</p>
+                       <a href="#" class="btn btn-outline-dark btn-sm">Scopri</a>
+                    </div>
+                 </div>
+              </div>
+              
+              <!-- Item 2 -->
+              <div class="col-md-3">
+                 <div class="card related-item-card h-100">
+                    <img src="risorse/dervisci3.jpg" class="card-img-top" alt="Sufi">
+                    <div class="card-body">
+                       <h5 class="card-title">Sufi</h5>
+                       <p class="card-text text-muted">1996 - Pittura</p>
+                       <a href="#" class="btn btn-outline-dark btn-sm">Scopri</a>
+                    </div>
+                 </div>
+              </div>
+              
+              <!-- Item 3 -->
+              <div class="col-md-3">
+                 <div class="card related-item-card h-100">
+                    <img src="risorse/dervisci4.jpg" class="card-img-top" alt="Autoritratto">
+                    <div class="card-body">
+                       <h5 class="card-title">Autoritratto</h5>
+                       <p class="card-text text-muted">2000-2010 - Pittura</p>
+                       <a href="#" class="btn btn-outline-dark btn-sm">Scopri</a>
+                    </div>
+                 </div>
+              </div>
+              
+              <!-- Item 4 -->
+              <div class="col-md-3">
+                 <div class="card related-item-card h-100">
+                    <img src="risorse/dervisci5.jpg" class="card-img-top" alt="Moschea">
+                    <div class="card-body">
+                       <h5 class="card-title">Moschea</h5>
+                       <p class="card-text text-muted">1996 - Pittura</p>
+                       <a href="#" class="btn btn-outline-dark btn-sm">Scopri</a>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </section>
+     
+      <!-- Footer -->
+      <footer class="bg-dark text-light py-4 mt-5">
+         <div class="container text-center">
+            <div class="row">
+               <!-- Links principali -->
+               <div class="col-md-4">
+                  <h5>Informazioni</h5>
+                  <ul class="list-unstyled">
+                     <li><a href="#" class="text-light text-decoration-none">Credits</a></li>
+                     <li><a href="WPP.html" class="text-light text-decoration-none">Web Project Plan</a></li>
+                     <li><a href="#" class="text-light text-decoration-none">About Us</a></li>
+                  </ul>
+               </div>
+               <!-- Icone social -->
+               <div class="col-md-4">
+                  <h5>Seguici</h5>
+                  <a href="#" class="me-3">
+                  <img src="risorse/Instagram.png" alt="Instagram" width="30">
+                  </a>
+                  <a href="#" class="me-3">
+                  <img src="risorse/Facebook.png" alt="Facebook" width="30">
+                  </a>
+                  <a href="#">
+                  <img src="risorse/twitter.png" alt="X" width="30">
+                  </a>
+               </div>
+               <!-- Disclaimer -->
+               <div class="col-md-4">
+                  <h5>Note legali</h5>
+                  <p class="small">Progetto privo di scopo di lucro, finalità totalmente amatoriali. L'autore non si assume nessuna responsabilità legale.</p>
+               </div>
+            </div>
+            <!-- Copyright -->
+            <div class="mt-3">
+               <p class="small mb-0">&copy; 2025 Archivio Franco Battiato. Tutti i diritti riservati.</p>
+            </div>
+         </div>
+      </footer>
+      <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+   </body>
+</html>
